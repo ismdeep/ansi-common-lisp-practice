@@ -1,0 +1,57 @@
+\documentclass[a4paper, twocolumn]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[Glenn]{fncychap}
+\usepackage{listings}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+
+\title{ANSI Common Lisp Practice}
+\author{ismdeep}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\setlength\columnseprule{0.1pt}
+\geometry{a4paper,left=1cm,right=1cm,top=2cm,bottom=1.5cm}
+\newfontfamily\monaco{Monaco}
+
+
+\lstset{frame=tb,
+  language=lisp,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  numbers=none,
+  numberstyle=\tiny\monaco,
+  basicstyle=\small\monaco,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=4
+}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\pagebreak
+%\pagestyle{plain}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\chead{ANSI Common Lisp Practice, ismdeep}
+\cfoot{}
+\tableofcontents
+\end{titlepage}
+
+\pagestyle{fancy}
+\chead{ANSI Common Lisp Practice, ismdeep}
+\cfoot{- \thepage \ -}
+  
