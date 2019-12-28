@@ -1,0 +1,5 @@
+(format t "~A~%" 'Hello)
+(format t "~A~%" '(my 3 "Sons"))
+(format t "~A~%" (list 'my (+ 2 1) "Sons"))
+(format t "~A~%" ())
+(format t "~A~%" nil)

@@ -1,0 +1,5 @@
+(format t "~A~%" (cons 1 '(2 3 4)))
+(format t "~A~%" (car '(1 2 3 4)))
+(format t "~A~%" (cdr '(1 2 3 4)))
+(format t "~A~%" (car (cdr (cdr '(1 2 3 4)))))
+(format t "~A~%" (third '(1 2 3 4)))
