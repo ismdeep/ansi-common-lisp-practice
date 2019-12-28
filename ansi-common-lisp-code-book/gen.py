@@ -25,7 +25,7 @@ def main(args):
       if '.DS_Store' == sub_section:
         continue
       sub_section_name = ".".join(sub_section.split(".")[:-1])
-      tex.append("\\subsection{%s}" % sub_section_name)
+      tex.append("\\subsection{%s}" % sub_section_name[sub_section_name.find('-')+1:].replace('-', ' '))
       tex.append("\\lstinputlisting{%s}" % os.path.join(
         section_dir, sub_section))
 
