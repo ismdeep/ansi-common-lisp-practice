@@ -1,0 +1,6 @@
+(format t "~A~%" (listp '(1 2 3 4)))
+(format t "~A~%" (null nil))
+(format t "~A~%" (not nil))
+(format t "~A~%" (if (listp '(a b c))
+    (+ 1 2)
+    (+ 5 6)))
