@@ -1,0 +1,5 @@
+(defparameter lst '(c a r a t))
+(format t "~A~%" (remove 'a lst))
+(format t "~A~%" lst)
+(setf lst (remove 'a lst))
+(format t "~A~%" lst)
