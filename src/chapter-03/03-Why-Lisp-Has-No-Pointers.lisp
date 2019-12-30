@@ -1,0 +1,6 @@
+(let ((x nil) (y nil))
+    (setf x '(a b c))
+    (setf y x)
+    (format t "~A~%" x)
+    (format t "~A~%" y)
+    (format t "~A~%" (eql x y)))
