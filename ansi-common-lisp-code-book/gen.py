@@ -17,7 +17,7 @@ def main(args):
   for section in sections:
     if section == '.DS_Store':
       continue
-    tex.append("\\section{%s}" % section)
+    tex.append("\\section{%s}" % section.capitalize().replace('-', ' '))
     section_dir = os.path.join(args.code, section)
     sub_sections = os.listdir(section_dir)
     sub_sections.sort()
