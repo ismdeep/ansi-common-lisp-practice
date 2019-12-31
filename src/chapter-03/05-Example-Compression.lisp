@@ -1,5 +1,4 @@
-; run-length encoding
-
+; run-length encoding compression
 (defun compress (x)
     (if (consp x)
         (compr (car x) 1 (cdr x))
@@ -20,5 +19,19 @@
         elt))
 
 
-(format t "~A~%" (compress '(1 1 1 0 1 0 0 0 0 1)))
+; run-length decoding uncompression
+(defun uncompress (lst)
+    (if (null lst)
+        nil
+        (let ((elt (car lst)) (rest (uncompress (cdr lst))))
+            (if (consp elt)
+                (append (apply #'list-of elt) rest)
+                (cons elt rest)))))
 
+(defun list-of (n elt)
+    (if (zerop n)
+        nil
+        (cons elt (list-of (- n 1) elt))))
+
+(format t "~A~%" (compress '(1 1 1 0 1 0 0 0 0 1)))
+(format t "~A~%" (uncompress '((3 1) 0 1 (4 0) 1)))
