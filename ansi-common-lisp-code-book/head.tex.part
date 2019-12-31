@@ -1,4 +1,5 @@
-\documentclass[a4paper, twocolumn]{article}
+%\documentclass[a4paper, twocolumn]{article}
+\documentclass[a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage[Glenn]{fncychap}
 \usepackage{listings}
@@ -18,7 +19,6 @@
 \setlength\columnseprule{0.1pt}
 \geometry{a4paper,left=1cm,right=1cm,top=2cm,bottom=1.5cm}
 \newfontfamily\monaco{Monaco}
-
 
 \lstset{frame=tb,
   language=lisp,
